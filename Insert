@@ -1,0 +1,24 @@
+import java.util.Arrays;
+import java.util.Scanner;
+public class Insert {
+public static void main(String[] args) {
+
+Scanner scan=new Scanner(System.in);
+int n=scan.nextInt();
+int a[]=new int[n];
+for (int i=0;i<n;i++) {
+a[i]=scan.nextInt();
+}
+
+for (int i = 1; i < a.length; i++) {
+int Element = a[i];
+int location = i-1;
+while (location >= 0 && a[location] > Element) {
+a[location + 1] = a[location];
+location--;
+}
+a[location + 1] = Element;
+}
+System.out.println(Arrays.toString(arr));
+}
+}
